@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nasa-api</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <br>
+    <h1>Yikes! These asteroids nearly missed planet Earth</h1>
+    <h1>between the following 2 days this year!</h1>
+      <br>
+      <h2><em>Here is some info on how close they came between 2017-04-15 and 2017-04-16:</em></h2>
+    <!-- jQuery will append into the following div -->
+    <div id="asteroids">
+      <!-- Assign a tag with a class or id to the loop function in your JS file that creates
+      a loop through the entire JSON object if "dangerous: true" and prints off the names that you want with their values
+        <div> This div starts the loop and prints it all off in h1 format below, one at a time
+          <h1>miles per hour name and the value: "value"</h1>
+          <h1>max diameter in feet: "value"</h1>
+          <h1>distance from earth: "value"</h1>
+        -->
+    </div>
+    <!-- jQuery js -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- any custom js -->
+    <script src="/main.js"></script>
+  </body>
+</html>
+
+<!-- 2017-04-15
+"miles_per_hour" : "26405.545748746"
+estimated diameter max in feet : 3388.6368554964
+miss_distance" in "miles" : "35098164"
+
+2017-04-16
+"miles_per_hour" : "23566.8999578857"
+"estimated_diameter_max" : 2138.0853117517
+miss_distance" in "miles" : "18379742"
+
+2017-04-16
+"miles_per_hour" : "54026.3792776559"
+"estimated_diameter_max" : 62.7805375552
+miss_distance" in "miles" : "13357850"
+
+
+next is the jquery js file...  it loops through the "near_earth_objects" for any that are "dangerous === true" and those are pushed into a new array []...  finally, this array is sent via .append into the html div id...
