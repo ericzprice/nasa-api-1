@@ -1,0 +1,16 @@
+{
+  "name": "nasa-api-using-express",
+  "version": "1.0.0",
+  "description": "upgrading nasa-api-e using server.js while hiding api key",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Price",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "request": "^2.81.0"
+  }
+}

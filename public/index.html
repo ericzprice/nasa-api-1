@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>nasa-api</title>
+    <title>Choose a Date to see Matching Dangerous Asteroids</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body class="container">
     <br>
     <h1>Yikes! These asteroids nearly missed planet Earth</h1>
-    <h1>between the following 2 days this year!</h1>
-      <br>
-      <h2><em>Here is some info on how close they came between 2017-04-15 and 2017-04-16:</em></h2>
+    <br>
+    <h2><em>Here is some info on how close they came between 2017-04-15 and 2017-04-16:</em>
+    </h2>
+    <form id="asteroid-form" method="POST" action="/asteroid-form">
+        <input id="asteroid-date" type="date" name="date">
+        <input type="submit" value="submit">
+    </form>
+    <hr>
+    <h3>The following asteroids matched your query:</h3>
+    <hr>
     <!-- jQuery will append into the following div -->
     <div id="asteroids">
-      <!-- Assign a tag with a class or id to the loop function in your JS file that creates
-      a loop through the entire JSON object if "dangerous: true" and prints off the names that you want with their values
-        <div> This div starts the loop and prints it all off in h1 format below, one at a time
-          <h1>miles per hour name and the value: "value"</h1>
-          <h1>max diameter in feet: "value"</h1>
-          <h1>distance from earth: "value"</h1>
-        -->
+
     </div>
     <!-- jQuery js -->
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
     <!-- bootstrap js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- any custom js -->
-    <script src="/main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
 
 <!-- 2017-04-15
 "miles_per_hour" : "26405.545748746"
